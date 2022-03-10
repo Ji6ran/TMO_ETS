@@ -1,5 +1,8 @@
 package com.galvanize.tmo.paspringstarter;
 
+import com.google.gson.Gson;
+import org.json.JSONArray;
+import org.springframework.boot.json.GsonJsonParser;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -10,14 +13,14 @@ public class bookService {
 
     List<Book> books = new ArrayList<>();
 
-    public List<Book> getAllBooks() {
+    public String getAllBooks() {
         Collections.sort(books, new Comparator<Book>() {
             @Override public int compare(Book p1, Book p2) {
                 return p2.getAuthor().compareTo(p1.getAuthor());
             }
         });
-
-        return books;
+        String json = new Gson().toJson(books);
+        return json;
     }
 
     public void clearBooks() {

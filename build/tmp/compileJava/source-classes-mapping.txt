@@ -1,9 +1,9 @@
-com/galvanize/tmo/paspringstarter/Book.java
- com.galvanize.tmo.paspringstarter.Book
+com/galvanize/tmo/paspringstarter/LibraryController.java
+ com.galvanize.tmo.paspringstarter.LibraryController
 com/galvanize/tmo/paspringstarter/PaSpringStarterApplication.java
  com.galvanize.tmo.paspringstarter.PaSpringStarterApplication
+com/galvanize/tmo/paspringstarter/Book.java
+ com.galvanize.tmo.paspringstarter.Book
 com/galvanize/tmo/paspringstarter/bookService.java
  com.galvanize.tmo.paspringstarter.bookService
  com.galvanize.tmo.paspringstarter.bookService$1
-com/galvanize/tmo/paspringstarter/LibraryController.java
- com.galvanize.tmo.paspringstarter.LibraryController

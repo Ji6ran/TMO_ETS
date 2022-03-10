@@ -2,9 +2,11 @@ package com.galvanize.tmo.paspringstarter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,9 +23,8 @@ public class LibraryController {
     }
 
     @GetMapping("api/books")
-    public List<Book> getBooks() {
-        List<Book> returnVal = service.getAllBooks();
-        return returnVal;
+    public String getBooks() {
+        return service.getAllBooks();
     }
 
     @PostMapping("api/books")
