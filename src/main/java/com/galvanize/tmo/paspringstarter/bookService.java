@@ -19,7 +19,7 @@ public class bookService {
     public List<Book> getAllBooks() {
         Collections.sort(books, new Comparator<Book>() {
             @Override public int compare(Book p1, Book p2) {
-                return p2.getTitle().compareTo(p1.getTitle());
+                return p1.getTitle().compareTo(p2.getTitle());
             }
         });
         return books;
