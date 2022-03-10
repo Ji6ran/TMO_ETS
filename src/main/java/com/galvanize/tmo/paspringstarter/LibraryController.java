@@ -22,7 +22,8 @@ public class LibraryController {
 
     @GetMapping("api/books")
     public List<Book> getBooks() {
-        return service.getAllBooks();
+        List<Book> returnVal = service.getAllBooks();
+        return returnVal;
     }
 
     @PostMapping("api/books")
