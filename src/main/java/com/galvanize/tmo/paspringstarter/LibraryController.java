@@ -26,9 +26,9 @@ public class LibraryController {
     }
 
     @PostMapping("/api/books")
-    @ResponseStatus(HttpStatus.CREATED)
-    public Book addBook(@RequestBody Book newBook) {
-        return service.addBook(newBook);
+    public ResponseEntity<Book> addBook(@RequestBody Book newBook) {
+        Book book = service.addBook(newBook);
+        return new ResponseEntity<Book>(book, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/api/books")
