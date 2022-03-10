@@ -20,18 +20,18 @@ public class LibraryController {
 
     }
 
-    @GetMapping("/api/books")
+    @GetMapping("api/books")
     public List<Book> getBooks() {
         return service.getAllBooks();
     }
 
-    @PostMapping("/api/books")
+    @PostMapping("api/books")
     public ResponseEntity<Book> addBook(@RequestBody Book newBook) {
         Book book = service.addBook(newBook);
         return new ResponseEntity<Book>(book, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/api/books")
+    @DeleteMapping("api/books")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void removeBooks() {
         service.clearBooks();
