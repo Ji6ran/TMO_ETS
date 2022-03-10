@@ -6,4 +6,3 @@ com/galvanize/tmo/paspringstarter/LibraryController.java
  com.galvanize.tmo.paspringstarter.LibraryController
 com/galvanize/tmo/paspringstarter/bookService.java
  com.galvanize.tmo.paspringstarter.bookService
- com.galvanize.tmo.paspringstarter.bookService$1

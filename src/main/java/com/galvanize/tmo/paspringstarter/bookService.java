@@ -9,27 +9,27 @@ public class bookService {
     int id = 1;
 
     List<Book> books = new ArrayList<>();
+    Book[] array = new Book[3];
 
     public Book[] getAllBooks() {
-        Collections.sort(books, new Comparator<Book>() {
-            @Override public int compare(Book p1, Book p2) {
-                return p2.getAuthor().compareTo(p1.getAuthor()); // Ascending
-            }
-        });
-        Book[] array = new Book[books.size()];
-        books.toArray(array); // fill the array
-
         return array;
     }
 
     public void clearBooks() {
-        books.clear();
+        for (int i = 0; i < array.length; ++i) {
+            array[i] = null;
+        }
     }
 
     public Book addBook(Book newBook) {
         newBook.setId(id);
         id++;
-        books.add(newBook);
+        for (int i = 0; i < array.length; ++i) {
+            if (array[i] == null) {
+                array[i] = newBook;
+                break;
+            }
+        }
         return newBook;
     }
 }
