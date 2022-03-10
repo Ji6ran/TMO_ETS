@@ -5,6 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.boot.json.GsonJsonParser;
+import com.galvanize.tmo.paspringstarter.AllBooks;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -13,7 +14,6 @@ import java.util.stream.Collectors;
 @Service
 public class bookService {
     int id = 1;
-
     List<Book> books = new ArrayList<>();
 
     public List<Book> getAllBooks() {
@@ -22,8 +22,7 @@ public class bookService {
                 return p2.getAuthor().compareTo(p1.getAuthor());
             }
         });
-        List<Book> list = books.stream().map(o -> (Book) o).collect(Collectors.toList());
-        return list;
+        return books;
     }
 
     public void clearBooks() {
